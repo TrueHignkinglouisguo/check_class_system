@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.louis.theclass">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/login_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_MainActivity" />
+        <activity
+            android:name=".ScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SigninActivity"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".ForgetPassword"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".SubmitActivity"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".SettingActivity"
+            android:theme="@style/setting_theme" />
+        <activity
+            android:name=".UserInfoActivity"
+            android:theme="@style/setting_theme" />
+        <activity
+            android:name=".SelectInfoActivity"
+            android:theme="@style/setting_theme" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.louis.theclass"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".TaskInfo_Activity"
+            android:theme="@style/DialogTheme"
+            >
+        </activity>
+    </application>
+
+</manifest>

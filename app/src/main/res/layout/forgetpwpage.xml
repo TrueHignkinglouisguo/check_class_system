@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/signin_background">
+    <TextView
+        android:id="@+id/forgetpwpage_title1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="找回密码"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+    <RelativeLayout
+        android:id="@+id/forgetpwpage_layout_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/forgetpwpage_title1"
+        >
+        <include
+            android:id="@+id/forgetpwpage_input"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            layout="@layout/forgetpwpage_input" />
+        <include
+            android:id="@+id/forgetpwpage_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/loginpage_progress"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/forgetpwpage_signinbutton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/forgetpwpage_layout_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/sigin_siginbutton"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+</android.support.constraint.ConstraintLayout>
